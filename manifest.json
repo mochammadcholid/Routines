@@ -1,0 +1,66 @@
+{
+  "defaultAppearance": {
+    "cardBorderStyle": "solid",
+    "cardShape": "rounded",
+    "iconBorderStyle": "dashed",
+    "iconShape": "circle"
+  },
+  "options": {
+    "borderStyles": [
+      {
+        "id": "none",
+        "label": "Polos (Tanpa Garis Tepi)",
+        "cssBorderStyle": "none",
+        "cssBorderWidth": "0px"
+      },
+      {
+        "id": "dashed",
+        "label": "Garis Putus-putus (Dashed)",
+        "cssBorderStyle": "dashed",
+        "cssBorderWidth": "1.5px"
+      },
+      {
+        "id": "solid",
+        "label": "Solid (Garis Utuh)",
+        "cssBorderStyle": "solid",
+        "cssBorderWidth": "1.5px"
+      }
+    ],
+    "shapes": {
+      "card": [
+        {
+          "id": "circle",
+          "label": "Melingkar (Circle / Pill)",
+          "cssRadius": "36px"
+        },
+        {
+          "id": "rounded",
+          "label": "Agak Kotak (Rounded)",
+          "cssRadius": "22px"
+        },
+        {
+          "id": "square",
+          "label": "Kotak Tajam (Square)",
+          "cssRadius": "4px"
+        }
+      ],
+      "icon": [
+        {
+          "id": "circle",
+          "label": "Melingkar (Circle)",
+          "cssRadius": "50%"
+        },
+        {
+          "id": "rounded",
+          "label": "Agak Kotak (Rounded)",
+          "cssRadius": "13px"
+        },
+        {
+          "id": "square",
+          "label": "Kotak Tajam (Square)",
+          "cssRadius": "4px"
+        }
+      ]
+    }
+  }
+}
