@@ -1,66 +1,20 @@
 {
-  "defaultAppearance": {
-    "cardBorderStyle": "solid",
-    "cardShape": "rounded",
-    "iconBorderStyle": "dashed",
-    "iconShape": "circle"
-  },
-  "options": {
-    "borderStyles": [
-      {
-        "id": "none",
-        "label": "Polos (Tanpa Garis Tepi)",
-        "cssBorderStyle": "none",
-        "cssBorderWidth": "0px"
-      },
-      {
-        "id": "dashed",
-        "label": "Garis Putus-putus (Dashed)",
-        "cssBorderStyle": "dashed",
-        "cssBorderWidth": "1.5px"
-      },
-      {
-        "id": "solid",
-        "label": "Solid (Garis Utuh)",
-        "cssBorderStyle": "solid",
-        "cssBorderWidth": "1.5px"
-      }
-    ],
-    "shapes": {
-      "card": [
-        {
-          "id": "circle",
-          "label": "Melingkar (Circle / Pill)",
-          "cssRadius": "36px"
-        },
-        {
-          "id": "rounded",
-          "label": "Agak Kotak (Rounded)",
-          "cssRadius": "22px"
-        },
-        {
-          "id": "square",
-          "label": "Kotak Tajam (Square)",
-          "cssRadius": "4px"
-        }
-      ],
-      "icon": [
-        {
-          "id": "circle",
-          "label": "Melingkar (Circle)",
-          "cssRadius": "50%"
-        },
-        {
-          "id": "rounded",
-          "label": "Agak Kotak (Rounded)",
-          "cssRadius": "13px"
-        },
-        {
-          "id": "square",
-          "label": "Kotak Tajam (Square)",
-          "cssRadius": "4px"
-        }
-      ]
+  "name": "Routines — Ibadah, Kalender & Produktivitas",
+  "short_name": "Routines",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111316",
+  "theme_color": "#3A4A54",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3176/3176343.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3176/3176343.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  }
+  ]
 }
