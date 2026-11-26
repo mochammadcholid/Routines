@@ -1,27 +1,34 @@
-const CACHE_NAME = 'routines-cache-v1';
-const urlsToCache = [
+const CACHE_NAME = 'routines-v2';
+const ASSETS = [
+  './',
   './index.html',
   './manifest.json',
   './logo.png'
 ];
 
-// Saat aplikasi diinstal, simpan file ke cache
-self.addEventListener('install', event => {
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS);
+    })
   );
 });
 
-// Ambil file dari cache saat offline
-self.addEventListener('fetch', event => {
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+      );
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Jika ada di cache, ambil dari cache. Jika tidak, ambil dari internet.
-        return response || fetch(event.request);
-      })
+    caches.match(event.request).then((cachedResponse) => {
+      return cachedResponse || fetch(event.request);
+    })
   );
 });
