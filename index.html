@@ -50,6 +50,35 @@
       --icon-border-style: none;
       --icon-border-color: transparent;
     }
+:root {
+  --card-border-style: solid;
+  --card-border-width: 1px;
+  --card-radius: 22px;
+  --icon-border-style: dashed;
+  --icon-border-width: 1.5px;
+  --icon-radius: 50%;
+}
+
+/* Terapkan ke semua komponen Kartu */
+.m3-card,
+.shortcut-tile,
+.settings-list-card,
+.detail-selected-card {
+  border-style: var(--card-border-style) !important;
+  border-width: var(--card-border-width) !important;
+  border-radius: var(--card-radius) !important;
+}
+
+/* Terapkan ke semua komponen Wadah Ikon */
+.slist-icon-circle,
+.shortcut-icon,
+.est-icon,
+.quote-minimal-emoji {
+  border-color: rgba(var(--primary-rgb), 0.45);
+  border-style: var(--icon-border-style) !important;
+  border-width: var(--icon-border-width) !important;
+  border-radius: var(--icon-radius) !important;
+}
 
     [data-theme="dark"] {
       --bg: #111316;
